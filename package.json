@@ -4,7 +4,9 @@
   "description": "bonjour faustinien",
   "main": "index.js",
   "scripts": {
-    "init:typescript": "tsc --watch"
+    "init:typescript": "tsc --watch",
+    "watch:nodemon": "npx nodemon dist/index.js",
+    "start": "npx concurrently npm:init:typescript npm:watch:nodemon"
   },
   "repository": {
     "type": "git",
@@ -19,6 +21,8 @@
   "homepage": "https://github.com/Faustinien/formation-nodejs#readme",
   "devDependencies": {
     "@types/node": "^18.14.2",
+    "concurrently": "^7.6.0",
+    "nodemon": "^2.0.20",
     "typescript": "^4.9.5"
   }
 }
